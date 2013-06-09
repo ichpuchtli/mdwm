@@ -1,0 +1,4 @@
+mdwm
+====
+
+My dwm configuration
