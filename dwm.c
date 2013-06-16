@@ -253,6 +253,9 @@ static int xerrordummy(Display *dpy, XErrorEvent *ee);
 static int xerrorstart(Display *dpy, XErrorEvent *ee);
 static void zoom(const Arg *arg);
 
+/* Plugins */
+void shiftview(const Arg *arg);
+
 /* variables */
 static const char broken[] = "broken";
 static char stext[256];
@@ -290,6 +293,9 @@ static Window root;
 
 /* compile-time check if all tags fit into an unsigned int bit array. */
 struct NumTags { char limitexceeded[LENGTH(tags) > 31 ? -1 : 1]; };
+
+/* Plugins */
+#include "shiftview.c"
 
 /* function implementations */
 void
